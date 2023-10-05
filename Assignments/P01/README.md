@@ -59,8 +59,8 @@ Only these commands are supported by this Shell Program (shell_loop.py)
 |   wc    |        word or line count        |          Pat           | usable flags  -l, -w, -c |
 |  sort   |       alphabetize by line        |          Pat           |                          |
 |   cat   |           join 2 files           |          Pat           |                          |
-|  head   |     list 1st n lines of file     |         Marcos         |       usable flags       |
-|  tail   |    list last n lines of file     |         Marcos         |       usable flags       |
+|  head   |     list 1st n lines of file     |         Marcos         |    usable flags   -n     |
+|  tail   |    list last n lines of file     |         Marcos         |    usable flags   -n     |
 |  less   |    list screen worth of lines    | Jon, ChatGPT & Bourbon |                          |
 | history |     list history of commands     |         Marcos         |     usable flags -c      |
 |   !x    | run a specified cmd from history |         Marcos         |                          |
