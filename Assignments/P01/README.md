@@ -48,25 +48,25 @@ $ ```down arrow``` -> shows next command typed at the prompt if the up arrow had
 ### Commands List: ###
 Only these commands are supported by this Shell Program (shell_loop.py)
 
-| command |           description            |         Author         |          Notes           |
-| :-----: | :------------------------------: | :--------------------: | :----------------------: |
-|   ls    |        directory listing         |         Marcos         | usable flags -l, -a, -h  |
-|  chmod  |        change permissions        |       Jon Marcos       |                          |
-|   pwd   |        working directory         |          Pat           |                          |
-|   cd    |         change directory         | Jon, ChatGPT & Bourbon |                          |
-|  mkdir  |          make directory          | Jon, ChatGPT & Bourbon |                          |
-|   mv    |        move a file or dir        | Jon, ChatGPT & Bourbon |                          |
-|   cp    |           copy a file            | Jon, ChatGPT & Bourbon |                          |
-|   rm    |       remove file or  dir        |         Marcos         |     usable flags -r      |
-|   wc    |        word or line count        |          Pat           | usable flags  -l, -w, -c |
-|  sort   |       alphabetize by line        |          Pat           |                          |
-|   cat   |           join 2 files           |          Pat           |                          |
-|  head   |     list 1st n lines of file     |         Marcos         |    usable flags   -n     |
-|  tail   |    list last n lines of file     |         Marcos         |    usable flags   -n     |
-|  less   |    list screen worth of lines    | Jon, ChatGPT & Bourbon |                          |
-| history |     list history of commands     |         Marcos         |     usable flags -c      |
-|   !x    | run a specified cmd from history |         Marcos         |                          |
-|  grep   |       find a given string        | Jon, ChatGPT & Bourbon |     usable flags -l      |
+| command |           description            |    Author    |          Notes           |
+| :-----: | :------------------------------: | :----------: | :----------------------: |
+|   ls    |        directory listing         |    Marcos    | usable flags -l, -a, -h  |
+|  chmod  |        change permissions        |  Jon Marcos  |                          |
+|   pwd   |        working directory         |     Pat      |                          |
+|   cd    |         change directory         | Jon, ChatGPT |                          |
+|  mkdir  |          make directory          | Jon, ChatGPT |                          |
+|   mv    |        move a file or dir        | Jon, ChatGPT |                          |
+|   cp    |           copy a file            | Jon, ChatGPT |                          |
+|   rm    |       remove file or  dir        |    Marcos    |     usable flags -r      |
+|   wc    |        word or line count        |     Pat      | usable flags  -l, -w, -c |
+|  sort   |       alphabetize by line        |     Pat      |                          |
+|   cat   |           join 2 files           |     Pat      |                          |
+|  head   |     list 1st n lines of file     |    Marcos    |    usable flags   -n     |
+|  tail   |    list last n lines of file     |    Marcos    |    usable flags   -n     |
+|  less   |    list screen worth of lines    | Jon, ChatGPT |                          |
+| history |     list history of commands     |    Marcos    |     usable flags -c      |
+|   !x    | run a specified cmd from history |    Marcos    |                          |
+|  grep   |       find a given string        | Jon, ChatGPT |     usable flags -l      |
 
 ### Shell Program Files ###
 |     Program      |                 Description                  | Author |
