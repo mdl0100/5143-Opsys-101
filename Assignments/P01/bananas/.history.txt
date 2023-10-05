@@ -1,3 +1,0 @@
-
-cp new.txt
-cd ..

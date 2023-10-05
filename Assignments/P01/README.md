@@ -22,7 +22,9 @@ This is a project written in python that implements a basic shell ......
     enter each command separate by a pipe ' | '
 - output of sequential commands can be redirected into an output file
     by using a ' > ' after the last command.
-
+- bananas is a sample directory, as are its contents
+- meat.txt, pig.txt, and somestuff.txt are sample files
+  
 #### Example Commands
 
 $ ```any command --help``` -> gives the usage of the command
@@ -90,5 +92,6 @@ Only these commands are supported by this Shell Program (shell_loop.py)
 |    cmdSort.py    |                sort function                 |  Pat   |
 |    cmdTail.py    |                tail function                 | Marcos |
 |     cmdWc.py     |             word count function              |  Pat   |
+
 
 ***References***
