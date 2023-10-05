@@ -8,6 +8,15 @@ def tail(**kwargs):
     """
         tail command : prints the last 10 lines of a file
         flags        : -n (number of lines to print)
+        Usage: tail [FILE] [-n NUMBER]
+        Parameters:
+            kwargs (dict): dictionary of flags and parameters
+        Returns:
+            string: last 10 lines of a file (or last n lines if specified)
+        Examples:
+            tail file1.txt
+            tail -n 5 file1.txt
+            tail file1.txt -n 5
     """
     # Check for flag
     output = []

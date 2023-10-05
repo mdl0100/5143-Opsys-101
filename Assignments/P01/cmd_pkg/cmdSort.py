@@ -13,6 +13,12 @@ def sort(**kwargs):
     Usage:
         sort filename
         Sorts filename by line in alphabetic order. Uppercases are treated as lowercase   
+    Parameters:
+        kwargs (dict): dictionary of flags and parameters
+    Returns:
+        string: sorted file
+    Examples:
+        sort file1.txt
 """
     try:
         with open(kwargs['params'][0],'r') as f:

@@ -37,7 +37,12 @@ def cd(**kwargs):
     Description
         when called, function shows cwd with command prompt
         requires a directory name parameter
-        optionally can handle a /path/directory name and .. , . and ~ parameters                        
+        optionally can handle a /path/directory name and .. , . and ~ parameters          
+    Examples
+        cd directory name or cd /path/path/directory name
+        cd .. changes CWD up one directory level in current path
+        cd . changes CWD to current directory
+        cd ~ changes CWD to /root/user directory              
     """
     # while True:
     #     # Get the current working directory

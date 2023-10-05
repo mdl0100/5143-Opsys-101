@@ -1,3 +1,10 @@
  
 clear history
 history
+cp pig.txt bananas/this.txt
+rm bananas/this.txt/pig.txt
+rm bananas/this.txt
+rm bananas/this.txt -r
+mkdir bananas/example
+rm bananas/example
+rm bananas/example -r

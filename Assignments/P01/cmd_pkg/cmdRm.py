@@ -39,6 +39,9 @@ def rm(**kwargs):
         # remove the file
         try:
             os.remove(kwargs['params'][0])
-        except FileNotFoundError:
-            print(f"rm: cannot remove '{kwargs['params'][0]}': No such file or directory")
+        except (FileNotFoundError, IsADirectoryError) as e:
+            if e.errno == 21:
+                print(f"rm: cannot remove '{kwargs['params'][0]}': Is a directory")
+            else:
+                print(f"rm: cannot remove '{kwargs['params'][0]}': No such file or directory")
     return

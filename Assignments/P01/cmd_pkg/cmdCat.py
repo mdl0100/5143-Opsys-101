@@ -4,6 +4,7 @@ def cat(**kwargs):
     Usage: cat [OPTION]... [FILE]...
     Concatenate FILE(s) to standard output.
 
+    
     Options:
  
         -n                  number all output lines

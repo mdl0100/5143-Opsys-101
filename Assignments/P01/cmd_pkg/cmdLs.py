@@ -15,10 +15,16 @@ import os, sys, stat, datetime, pwd,grp
 
 def ls(**kwargs):
     """
-        ls command  : lists the contents of a directory 
-        flags       : -l (long format)
-                      -a (all files)
-                      -h (human readable)
+        Name
+        cmdLs.py
+        function: ls
+        Synopsis
+            lists the contents of a directory
+        Examples    
+            ls
+            ls -l
+            ls -a
+            ls -h
     """
     output = ""
     # Check for flags
