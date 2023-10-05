@@ -13,6 +13,14 @@
 #### Overview:
 This is a project written in python that implements a basic shell ......
 
+### Required Packages
+- datetime
+- grp
+- os
+- sys
+- getpass
+- StringIO from io
+- shutil
 
 #### Instructions
 
