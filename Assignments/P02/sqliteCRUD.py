@@ -25,6 +25,8 @@ class SQLiteCrud:
         self.cursor = self.conn.cursor()
         self.table_name = table_name
         self.columns = self.get_columns(self.table_name)
+        self.current_directory = 0
+        self.current_directory_name = "~"
 
     def __raw_results(self, results):
         """Converts raw results to a list of table names."""
@@ -57,7 +59,7 @@ class SQLiteCrud:
         self.columns = columns
         return columns
     
-    def insert_data(self, table_name, data):
+    def insert_data(self, table_name, data, columns=""):
         """
             Inserts data in a table.
 
@@ -66,10 +68,12 @@ class SQLiteCrud:
                 data (tuple): Tuple of values to insert into the table.
 
         """
+        if not columns:
+            columns = f"({', '.join(self.columns[1:])})"
         try:
             # Retrieve all data from the table
             placeholders = ", ".join(["?"] * len(data))
-            insert_query = f"INSERT INTO {table_name} VALUES ({placeholders});"
+            insert_query = f"INSERT INTO {table_name} {columns} VALUES ({placeholders});"
             self.cursor.execute(insert_query, data)
             self.conn.commit()
             print(f"Inserted data into table '{table_name}'.")
@@ -179,7 +183,7 @@ class SQLiteCrud:
                 select_query = f"SELECT * FROM {table_name} WHERE {condition_column} = '{condition_value}' {order};"
                 self.cursor.execute(select_query)
                 results = self.cursor.fetchall()
-                print(f"Retrieved data from table '{table_name}'.")
+                #print(f"Retrieved data from table '{table_name}'.")
                 output = []
                 for row in results:
                     output.append(dict(zip(self.columns, row)))
@@ -189,7 +193,7 @@ class SQLiteCrud:
                 select_query = f"SELECT * FROM {table_name} {order};"
                 self.cursor.execute(select_query)
                 results = self.cursor.fetchall()
-                print(f"Retrieved data from table '{table_name}'.")
+                #print(f"Retrieved data from table '{table_name}'.")
                 output = []
                 for row in results:
                     output.append(dict(zip(self.columns, row)))
