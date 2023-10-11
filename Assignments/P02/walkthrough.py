@@ -25,15 +25,38 @@ def display_pwd(directory):
 
 if __name__ == "__main__":
     # Create the database
-    db = SQLiteCrud("filesystem.sqlite")
-    table = "filesystem"
+    current_directory = "/home/user"
+    files_before = {
+        "file1.txt": ("user", "-rw-r--r--", "12 KB"),
+        "file2.txt": ("user", "-rw-r--r--", "15 KB"),
+        "file3.txt": ("user", "-rw-r--r--", "18 KB"),
+        "file4.txt": ("user", "-rw-r--r--", "14 KB"),
+        "file5.txt": ("user", "-rw-r--r--", "13 KB"),
+        "file6.txt": ("user", "-rw-r--r--", "16 KB"),
+        "file7.txt": ("user", "-rw-r--r--", "11 KB"),
+        "project": ("user", "drwxr-xr-x", "[Dir]")
+    }
+    files_after = {
+        "file3.txt": ("user", "-rw-r--r--", "18 KB"),
+        "file4.txt": ("user", "-rw-r--r--", "14 KB"),
+        "file6.txt": ("user", "-rw-r--r--", "16 KB"),
+        "file7.txt": ("user", "-rw-r--r--", "11 KB"),
+        "project": ("user", "drwxr-xr-x", "[Dir]"),
+        "newfolder": ("user", "drwxr-xr-x", "[Dir]")
+    }
+
     
-    check = db.read_data("filesystem")
-    print(db.__raw_results(check))
+    db = SQLiteCrud("testfilesystem.sqlite")
+    table = "files_data"
+    
+
+
+    check = db.read_data(table, 'pid', '4')
+    print(check)
     
     # # Demonstrate the commands
     # print("[bold blue]Command:[/bold blue] [green]ls[/green]")
-    # display_ls(table)
+    # display_ls(files_before)
 
     # print("\n[bold blue]Command:[/bold blue] [green]mkdir newfolder[/green]")
     # print("[bold green]Folder 'newfolder' created.[/bold green]")

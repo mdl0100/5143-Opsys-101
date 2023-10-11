@@ -34,6 +34,8 @@ class SQLiteCrud:
         """Formats results into a PrettyTable."""
         table = PrettyTable()
         table.field_names = [desc[0] for desc in self.cursor.description]
+        print("THESE ARE THE COLUMN NAMES")
+        print(desc[0].__doc__ for desc in self.cursor.description)
         table.add_rows(results)
         return table
     
